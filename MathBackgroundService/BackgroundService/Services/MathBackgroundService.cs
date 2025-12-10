@@ -110,6 +110,8 @@ public class MathBackgroundService : BackgroundService
         {
             _data[key].Choice = -1;
         }
+        await backgroundServiceContext.SaveChangesAsync();
+
     }
 
     private async Task Update(CancellationToken stoppingToken)
